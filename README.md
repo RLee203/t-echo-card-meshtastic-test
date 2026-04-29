@@ -17,7 +17,8 @@ This is not an official Meshtastic release and it may still contain bugs.
 - Small-screen menu overlays were adjusted to fit the T-Echo Card OLED more cleanly
 - Boot screen was simplified so the tiny OLED shows only the Meshtastic logo
 - Message compose was simplified to preset-only sending while keeping destination selection
-- A forced buzzer test path was added for hardware validation from Button C long-press and the hidden test menu
+- An experimental onboard I2S alert/speaker backend was added for the T-Echo Card audio path
+- A forced audio test path was added for hardware validation from Button C long-press and the hidden test menu
 - GPS/compass screen is using a simplified ultra-small layout for the card display
 
 ## Install
@@ -30,7 +31,7 @@ This is not an official Meshtastic release and it may still contain bugs.
 
 - Button A / B: used for on-device navigation
 - Button C: cycles the 3 onboard LEDs / flashlight brightness
-- Long-press Button C: runs the buzzer hardware test
+- Long-press Button C: runs the onboard audio hardware test
 
 ## LED Behavior
 
@@ -66,8 +67,8 @@ What has been tested so far:
 
 ## Known Issues / In Progress
 
-- GPIO buzzer testing path is present, but the onboard buzzer still did not produce audible output in testing
-- `Use I2S as buzzer` is not implemented yet for this nRF52840 T-Echo Card target
+- The original GPIO buzzer path still did not produce audible output in testing
+- The new onboard I2S alert path is now wired in, but still needs real-device sound verification
 - Additional hardware behavior may still need testing
 
 ## Notes
