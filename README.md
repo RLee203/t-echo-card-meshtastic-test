@@ -17,8 +17,9 @@ This is not an official Meshtastic release and it may still contain bugs.
 - Small-screen menu overlays were adjusted to fit the T-Echo Card OLED more cleanly
 - Boot screen was simplified so the tiny OLED shows only the Meshtastic logo
 - Message compose was simplified to preset-only sending while keeping destination selection
-- An experimental onboard I2S alert/speaker backend was added for the T-Echo Card audio path
+- The onboard T-Echo Card I2S alert/speaker path is now working for device-side notification audio
 - A forced audio test path was added for hardware validation from Button C long-press and the hidden test menu
+- Default external notification behavior was cleaned up to prefer I2S over the dead GPIO buzzer path
 - GPS/compass screen is using a simplified ultra-small layout for the card display
 
 ## Install
@@ -62,13 +63,15 @@ What has been tested so far:
 - BLE pairing works
 - Sending messages works
 - Receiving messages works
+- Long-press Button C audio test works on-device
+- External notification audio works through the onboard speaker path
 - GPS/compass display is working in a simplified view
 - Button C cycles the onboard LEDs / flashlight brightness
 
 ## Known Issues / In Progress
 
 - The original GPIO buzzer path still did not produce audible output in testing
-- The new onboard I2S alert path is now wired in, but still needs real-device sound verification
+- GPS fix acquisition still needs investigation on this board
 - Additional hardware behavior may still need testing
 
 ## Notes
