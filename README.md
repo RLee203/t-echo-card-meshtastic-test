@@ -20,6 +20,7 @@ This is not an official Meshtastic release and it may still contain bugs.
 - The onboard T-Echo Card I2S alert/speaker path is now working for device-side notification audio
 - A forced audio test path was added for hardware validation from Button C long-press and the hidden test menu
 - Default external notification behavior was cleaned up to prefer I2S over the dead GPIO buzzer path
+- A single onboard LED now blinks amber while external power is charging the device
 - GPS/compass screen is using a simplified ultra-small layout for the card display
 
 ## Install
@@ -65,12 +66,14 @@ What has been tested so far:
 - Receiving messages works
 - Long-press Button C audio test works on-device
 - External notification audio works through the onboard speaker path
+- Single-LED charge indicator works for charging state detection, though plug/unplug response is delayed and full-charge solid still needs confirmation
 - GPS/compass display is working in a simplified view
 - Button C cycles the onboard LEDs / flashlight brightness
 
 ## Known Issues / In Progress
 
 - The original GPIO buzzer path still did not produce audible output in testing
+- Charge-indicator LED still needs confirmation for the fully charged solid state
 - GPS fix acquisition still needs investigation on this board
 - Additional hardware behavior may still need testing
 
